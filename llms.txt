@@ -1,0 +1,14 @@
+# avalanchevssnowball.co.uk
+
+## What this site is
+A free UK-focused debt payoff calculator that compares the avalanche method (highest interest first) and the snowball method (smallest balance first). No login, no sign-up. Users enter their debts and optional extra monthly payment and see side-by-side results: total interest, time to debt-free, and a chart of balance over time.
+
+## Main pages
+- https://avalanchevssnowball.co.uk/ — Debt Avalanche vs Snowball Calculator (free payoff visualiser)
+- https://avalanchevssnowball.co.uk/blog/ — Blog index
+- https://avalanchevssnowball.co.uk/blog/debt-avalanche-vs-snowball-which-saves-more-uk.html — Debt Avalanche vs Snowball: Which Saves More Money in the UK?
+- https://avalanchevssnowball.co.uk/blog/how-to-pay-off-10000-debt-avalanche-snowball-worked-example.html — How to Pay Off £10,000 of Debt — Avalanche vs Snowball Worked Example
+- https://avalanchevssnowball.co.uk/blog/real-cost-minimum-payments-uk-credit-cards.html — The Real Cost of Only Paying Minimum Payments on UK Credit Cards
+
+## Keywords / topics
+Debt avalanche, debt snowball, UK debt payoff, credit card payoff calculator, payoff visualiser, minimum payments, interest savings, debt-free calculator, UK personal finance.

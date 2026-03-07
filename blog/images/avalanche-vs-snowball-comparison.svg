@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" width="400" height="160" aria-hidden="true">
+  <title>Avalanche method pays off debt faster than snowball  comparison of payoff speed</title>
+  <rect width="400" height="160" fill="transparent"/>
+  <!-- Grid hint -->
+  <path d="M40 20 L40 140 L380 140" stroke="#252a38" stroke-width="1" fill="none"/>
+  <!-- Avalanche: steeper drop (green) -->
+  <path d="M40 20 L120 60 L200 95 L280 120 L360 138" stroke="#3ecf8e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Snowball: slower drop (orange) -->
+  <path d="M40 20 L130 50 L220 85 L310 115 L380 140" stroke="#f5a623" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
+  <!-- Labels -->
+  <text x="365" y="132" fill="#3ecf8e" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Avalanche</text>
+  <text x="365" y="148" fill="#f5a623" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Snowball</text>
+</svg>
