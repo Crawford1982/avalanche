@@ -170,8 +170,9 @@
     </aside>
 
     <footer class="site-footer">
-      © 2025 Avalanche vs Snowball · <a href="/privacy.html">Privacy</a> · <a href="/copyright.html">Copyright</a>
+      © <span id="footerYear">2025</span> Avalanche vs Snowball · <a href="/privacy.html">Privacy</a> · <a href="/copyright.html">Copyright</a>
     </footer>
   </div>
+<script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
 </body>
 </html>
