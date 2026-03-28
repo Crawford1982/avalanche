@@ -7,12 +7,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://avalanchevssnowball.co.uk/privacy.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://avalanchevssnowball.co.uk/about.html</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://avalanchevssnowball.co.uk/copyright.html</loc>
+    <loc>https://avalanchevssnowball.co.uk/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -23,19 +24,19 @@
   </url>
   <url>
     <loc>https://avalanchevssnowball.co.uk/blog/debt-avalanche-vs-snowball-which-saves-more-uk.html</loc>
-    <lastmod>2025-02-01</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://avalanchevssnowball.co.uk/blog/how-to-pay-off-10000-debt-avalanche-snowball-worked-example.html</loc>
-    <lastmod>2025-02-01</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://avalanchevssnowball.co.uk/blog/real-cost-minimum-payments-uk-credit-cards.html</loc>
-    <lastmod>2025-02-01</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

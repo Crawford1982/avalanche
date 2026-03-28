@@ -12,3 +12,9 @@ Thumbs.db
 node_modules/
 .env
 .env.local
+
+# LibreOffice / Excel temp locks
+.~lock*
+
+# Local spreadsheet (not linked from site)
+debt-payoff-tracker.xlsx
