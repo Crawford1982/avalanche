@@ -37,5 +37,29 @@
     <a href="/">Calculator</a>
     <a href="/blog/">Blog</a>
   </div>
+  <script>
+    // Smart redirect: handle URLs missing .html extension and known slug aliases
+    (function() {
+      var path = window.location.pathname;
+      var specific = {
+        '/blog/debt-avalanche-vs-snowball-uk': '/blog/debt-avalanche-vs-snowball-which-saves-more-uk.html',
+        '/blog/debt-avalanche-vs-snowball': '/blog/debt-avalanche-vs-snowball-which-saves-more-uk.html',
+        '/blog/minimum-payments': '/blog/real-cost-minimum-payments-uk-credit-cards.html',
+        '/blog/pay-off-10000': '/blog/how-to-pay-off-10000-debt-avalanche-snowball-worked-example.html',
+        '/blog/how-long-to-pay-off-credit-card': '/blog/how-long-to-pay-off-credit-card-minimum-payments-uk.html',
+        '/blog/debt-avalanche': '/blog/debt-avalanche-method-uk-guide.html',
+        '/blog/debt-snowball': '/blog/debt-snowball-method-uk-guide.html',
+        '/blog/balance-transfer': '/blog/balance-transfer-credit-card-debt-avalanche-uk.html'
+      };
+      if (specific[path]) {
+        window.location.replace(specific[path]);
+        return;
+      }
+      // Generic: if no dot in the path (not a file), try appending .html
+      if (path && !path.endsWith('/') && path.lastIndexOf('.') < path.lastIndexOf('/')) {
+        window.location.replace(path + '.html' + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
 </body>
 </html>
