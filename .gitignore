@@ -15,6 +15,3 @@ node_modules/
 
 # LibreOffice / Excel temp locks
 .~lock*
-
-# Local spreadsheet (not linked from site)
-debt-payoff-tracker.xlsx
