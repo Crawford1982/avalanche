@@ -2,7 +2,6 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8">
-  <script>(function(){var p=location.protocol,h=location.hostname;if(p==='http:'&&h!=='localhost'&&h!=='127.0.0.1')location.replace('https:'+location.href.substring(p.length));})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0c0e12">
   <!-- Google tag (gtag.js) -->
@@ -24,7 +23,9 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.7; min-height: 100vh; }
     header { border-bottom: 1px solid var(--border); padding: 24px 32px; display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 16px; background: var(--surface); }
-    header h1 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; }
+    .site-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; margin: 0; }
+    .site-name a { color: inherit; text-decoration: none; }
+    .site-name a:hover { color: var(--muted); }
     .nav-links { display: flex; gap: 20px; font-size: 0.9rem; }
     .nav-links a { color: var(--muted); text-decoration: none; }
     .nav-links a:hover { color: var(--text); }
@@ -42,7 +43,7 @@
 </head>
 <body>
   <header>
-    <h1><a href="/" style="color:inherit;text-decoration:none">Debt Avalanche vs Snowball Calculator</a></h1>
+    <p class="site-name"><a href="/">Debt Avalanche vs Snowball Calculator</a></p>
     <nav class="nav-links" aria-label="Main">
       <a href="/">Calculator</a>
       <a href="/blog/">Blog</a>
@@ -52,7 +53,7 @@
   </header>
   <div class="container">
     <a href="/" class="back">← Back to Calculator</a>
-    <h1 style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 400; margin-bottom: 16px;">Privacy Policy</h1>
+    <h1 style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 400; margin-bottom: 16px;" id="main">Privacy Policy</h1>
     <p><strong>Last updated:</strong> March 2025.</p>
 
     <h2>Who we are</h2>
@@ -74,13 +75,13 @@
     <p>We do not use advertising or other tracking cookies beyond Analytics.</p>
 
     <h2>Your rights (UK / GDPR)</h2>
-    <p>Because we do not hold personal data about you, there is no data to access, correct, or delete. If you believe otherwise, please contact us using the details on the <a href="/copyright.html">Copyright &amp; terms</a> page.</p>
+    <p>Because we do not hold personal data about you, there is no data to access, correct, or delete. If you believe otherwise, please contact us at <a href="mailto:hello@avalanchevssnowball.co.uk">hello@avalanchevssnowball.co.uk</a>.</p>
 
     <h2>Changes</h2>
     <p>We may update this policy occasionally. The “Last updated” date at the top will be revised when we do.</p>
 
     <footer class="site-footer">
-      © <span id="year">2025</span> Avalanche vs Snowball · <a href="/privacy.html">Privacy</a> · <a href="/copyright.html">Copyright</a>
+      © <span id="year"></span> Avalanche vs Snowball · <a href="/about.html">About</a>
     </footer>
   </div>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
