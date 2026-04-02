@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0c0e12">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BE3PP167W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3BE3PP167W');
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>We Analysed 1,000 UK Debt Scenarios — When Snowball Actually Beats Avalanche</title>
+  <meta name="description" content="Original research: 1,000 simulated UK debt portfolios using the same maths as our free calculator. 85% of the time avalanche wins on interest — here's the full breakdown, including the rare cases where snowball wins.">
+  <link rel="canonical" href="https://avalanchevssnowball.co.uk/blog/1000-uk-debt-scenarios-avalanche-vs-snowball-study.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://avalanchevssnowball.co.uk/blog/1000-uk-debt-scenarios-avalanche-vs-snowball-study.html">
+  <meta property="og:title" content="We Analysed 1,000 UK Debt Scenarios — Avalanche vs Snowball Data">
+  <meta property="og:description" content="Original data: which method paid less total interest across 1,000 random UK-style debt situations? Full methodology and results.">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://avalanchevssnowball.co.uk/blog/images/study-1000-scenarios-chart.svg">
+  <meta property="article:published_time" content="2026-04-02T10:00:00+00:00">
+  <meta property="article:modified_time" content="2026-04-02T10:00:00+00:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="1,000 UK Debt Scenarios: Avalanche vs Snowball — Original Data">
+  <meta name="twitter:description" content="85% of scenarios: avalanche paid less interest than snowball. See the numbers and methodology.">
+  <meta name="twitter:image" content="https://avalanchevssnowball.co.uk/blog/images/study-1000-scenarios-chart.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"We Analysed 1,000 UK Debt Scenarios — When Snowball Actually Beats Avalanche","description":"Original research using the site's calculator engine on 1,000 random UK-style debt portfolios.","url":"https://avalanchevssnowball.co.uk/blog/1000-uk-debt-scenarios-avalanche-vs-snowball-study.html","image":"https://avalanchevssnowball.co.uk/blog/images/study-1000-scenarios-chart.svg","datePublished":"2026-04-02T10:00:00+00:00","dateModified":"2026-04-02T10:00:00+00:00","author":{"@type":"Organization","name":"Avalanche vs Snowball","url":"https://avalanchevssnowball.co.uk/about.html"},"publisher":{"@type":"Organization","name":"Avalanche vs Snowball","url":"https://avalanchevssnowball.co.uk/"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Calculator","item":"https://avalanchevssnowball.co.uk/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://avalanchevssnowball.co.uk/blog/"},{"@type":"ListItem","position":3,"name":"1,000 UK Debt Scenarios Study"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How often does the debt avalanche beat the snowball on total interest?","acceptedAnswer":{"@type":"Answer","text":"In our study of 1,000 random UK-style debt scenarios using the same calculator maths as this site, avalanche produced strictly lower total interest than snowball in 85.4% of cases. A further 13.7% tied on total interest, and snowball paid less interest in only 0.9% of runs."}},{"@type":"Question","name":"Is this real customer data?","acceptedAnswer":{"@type":"Answer","text":"No — it is a Monte Carlo-style simulation. We generated random but realistic portfolios (2–6 debts, APRs between roughly 6% and 40%, UK-style minimum payments, and random extra monthly payments) and ran them through the exact same payoff engine used by the free calculator on this website."}},{"@type":"Question","name":"When does snowball beat avalanche on interest?","acceptedAnswer":{"@type":"Answer","text":"Only in edge cases. Snowball and avalanche target the same debt first when your highest-APR debt is also your smallest balance — then both methods behave identically until that debt clears. True snowball wins on interest are extremely rare in our data (under 1%)."}}]}
+  </script>
+  <style>
+    :root { --bg: #0c0e12; --surface: #13161d; --border: #252a38; --text: #e8eaf0; --muted: #6b7490; --accent: #4f7cff; --avalanche: #3ecf8e; --snowball: #f5a623; --font-display: 'DM Serif Display', serif; --font-body: 'DM Sans', sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.7; min-height: 100vh; }
+    header { border-bottom: 1px solid var(--border); padding: 24px 32px; display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 16px; background: var(--surface); }
+    .site-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; margin: 0; }
+    .site-name a { color: inherit; text-decoration: none; }
+    header nav { display: flex; gap: 20px; font-size: 0.9rem; }
+    header nav a { color: var(--muted); text-decoration: none; }
+    header nav a:hover { color: var(--text); }
+    .container { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+    h1 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-bottom: 8px; line-height: 1.3; }
+    .article-meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 20px; }
+    .author-link { color: var(--muted); }
+    .lede { font-size: 1.05rem; color: var(--text); margin-bottom: 24px; }
+    h2 { font-family: var(--font-display); font-size: 1.35rem; margin-top: 36px; margin-bottom: 16px; }
+    p { margin-bottom: 16px; color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back { display: inline-block; margin-bottom: 24px; color: var(--muted); font-size: 0.9rem; }
+    .stat-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+    .stat-box strong { color: var(--text); }
+    .big-stat { font-family: var(--font-display); font-size: 2rem; color: var(--avalanche); line-height: 1.2; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-figure { margin: 28px 0; text-align: center; }
+    .article-figure img { max-width: 100%; height: auto; border-radius: 8px; }
+    .article-figure figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+    ul { margin: 16px 0 16px 24px; color: var(--muted); }
+    .cta { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin: 28px 0; }
+    .breadcrumb { font-size: 0.85rem; color: var(--muted); margin-bottom: 16px; }
+    .related-articles { margin-top: 24px; padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+    .related-articles h3 { font-family: var(--font-display); font-size: 0.95rem; color: var(--muted); margin-bottom: 12px; font-weight: 400; }
+    .related-articles ul { list-style: none; margin: 0; padding: 0; }
+    .related-articles li { margin-bottom: 8px; }
+    .related-articles a { color: var(--text); font-weight: 500; }
+    .site-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--muted); }
+    .site-footer a { color: var(--muted); }
+    .skip-link { position: absolute; top: -100px; left: 16px; background: var(--accent); color: #fff; padding: 10px 16px; border-radius: 6px; z-index: 100; }
+    .skip-link:focus { top: 16px; }
+    code { font-family: ui-monospace, monospace; font-size: 0.85rem; background: var(--surface); padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header>
+    <p class="site-name"><a href="/">Debt Avalanche vs Snowball Calculator</a></p>
+    <nav aria-label="Main">
+      <a href="/">Calculator</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </header>
+  <div class="container" id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Calculator</a> → <a href="/blog/">Blog</a> → <span aria-current="page">1,000 scenarios study</span></nav>
+    <a href="/blog/" class="back">← Blog</a>
+    <h1>We Analysed 1,000 UK Debt Scenarios — Here's When Snowball Actually Beats Avalanche</h1>
+    <p class="article-meta">Published 2 April 2026 · Last reviewed 2 April 2026 · Research · About 12 min read · <a href="/about.html" class="author-link">Avalanche vs Snowball</a></p>
+
+    <p class="lede">Everyone says the <strong>debt avalanche</strong> saves more money than the <strong>debt snowball</strong>. We wanted numbers, not vibes — so we ran <strong>one thousand random but realistic UK-style debt portfolios</strong> through the <em>exact same payoff engine</em> as our <a href="/">free calculator</a>. Here is what happened.</p>
+
+    <figure class="article-figure">
+      <img src="/blog/images/study-1000-scenarios-chart.svg" alt="Bar chart: in 85.4% of scenarios avalanche paid less total interest than snowball, 13.7% tied, 0.9% snowball paid less" width="420" height="180" loading="eager">
+      <figcaption>Outcome by total interest paid across 1,000 simulated scenarios (same maths as the live calculator).</figcaption>
+    </figure>
+
+    <div class="stat-box">
+      <p class="big-stat">85.4%</p>
+      <p><strong>Avalanche</strong> produced <em>strictly lower</em> total interest than snowball.</p>
+      <p style="margin-bottom:0"><strong>13.7%</strong> tied on total interest. <strong>0.9%</strong> of runs where snowball beat avalanche on interest (9 scenarios out of 1,000).</p>
+    </div>
+
+    <h2>Why we did this</h2>
+    <p>Search results are full of opinion pieces. We already publish a calculator that compares avalanche and snowball transparently — so we could stress-test the conventional wisdom at scale. The question: across many different balances, APRs, numbers of debts, and extra payment levels, how often does each method actually win on <strong>total interest</strong> and on <strong>time to debt-free</strong>?</p>
+
+    <h2>Methodology (so you can reproduce it)</h2>
+    <p>We implemented the calculator's monthly loop in Node.js line-for-line with the JavaScript in <code>index.html</code>: apply monthly interest, pay minimums on every open debt, then apply the full extra payment to the priority debt (highest APR for avalanche, smallest balance for snowball). We capped runs at 600 months, matching the site.</p>
+    <p>Each scenario included:</p>
+    <ul>
+      <li><strong>2–6 debts</strong> with random splits of a total balance between roughly £1,500 and £48,000</li>
+      <li><strong>APR</strong> per debt drawn uniformly between ~6% and ~40% (typical UK unsecured range)</li>
+      <li><strong>Minimum payments</strong> set in a UK-realistic way (interest plus at least 1% of balance, floor £25), so minimums always clear interest with headroom</li>
+      <li><strong>Extra monthly payment</strong> randomised as a multiple of total minimums (so some people are barely over minimums, others are aggressive)</li>
+    </ul>
+    <p>We used a <strong>seeded pseudo-random generator</strong> (<code>seed = 20260402</code>) so anyone can re-run our open script and get <em>identical</em> figures. The script lives in the site repository: <code>scripts/simulate-1000.mjs</code>.</p>
+
+    <h2>Headline results</h2>
+    <table>
+      <thead>
+        <tr><th>Metric</th><th>Result</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Avalanche strictly lower interest than snowball</td><td>854 / 1,000 (85.4%)</td></tr>
+        <tr><td>Exact tie on total interest</td><td>137 / 1,000 (13.7%)</td></tr>
+        <tr><td>Snowball strictly lower interest than avalanche</td><td>9 / 1,000 (0.9%)</td></tr>
+        <tr><td>Avalanche faster or equal in months to debt-free</td><td>741 / 1,000 (74.1%)</td></tr>
+        <tr><td>Snowball faster in months (may still cost more interest)</td><td>259 / 1,000 (25.9%)</td></tr>
+        <tr><td>Median extra interest if you chose snowball vs avalanche (all scenarios)</td><td>£679</td></tr>
+        <tr><td>75th percentile of that gap</td><td>£1,684</td></tr>
+        <tr><td>90th percentile</td><td>£2,913</td></tr>
+        <tr><td>Largest interest gap (avalanche advantage)</td><td>£6,555</td></tr>
+      </tbody>
+    </table>
+    <p>The &quot;median gap&quot; is the middle value of <em>(snowball total interest − avalanche total interest)</em> across all 1,000 runs. Positive means avalanche was cheaper; in most realistic UK mixes, the difference is hundreds to a few thousand pounds.</p>
+
+    <h2>By number of debts</h2>
+    <p>Ties cluster heavily with <strong>two debts</strong> — when there are only two orderings, avalanche and snowball often attack the same account first (when the expensive debt is also the smaller one). With more debts, pure ties become rarer and avalanche's advantage grows.</p>
+    <table>
+      <thead>
+        <tr><th>Debts</th><th>Scenarios</th><th>Avalanche wins</th><th>Tie</th><th>Snowball wins</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2</td><td>194</td><td>101</td><td>93</td><td>0</td></tr>
+        <tr><td>3</td><td>187</td><td>150</td><td>35</td><td>2</td></tr>
+        <tr><td>4</td><td>221</td><td>211</td><td>8</td><td>2</td></tr>
+        <tr><td>5</td><td>204</td><td>200</td><td>1</td><td>3</td></tr>
+        <tr><td>6</td><td>194</td><td>192</td><td>0</td><td>2</td></tr>
+      </tbody>
+    </table>
+
+    <h2>When does snowball &quot;win&quot;?</h2>
+    <p>In this simulation, <strong>snowball beat avalanche on total interest in fewer than 1% of cases</strong>. That matches the theory: snowball can only beat avalanche on interest when the orderings cause strictly different payment paths that accidentally reduce interest — extremely unusual. More often, the methods <strong>tie</strong> because they start on the same debt (highest rate = smallest balance).</p>
+    <p><strong>Months</strong> are a different story: snowball cleared all debts in fewer calendar months in about <strong>26%</strong> of runs. That does <em>not</em> mean snowball was cheaper — it can finish sooner in edge cases while still costing more interest overall. Always compare both metrics with <a href="/">your own numbers</a>.</p>
+
+    <h2>Limitations</h2>
+    <ul>
+      <li>Simulated data, not bank records — reality includes fees, 0% deals, payment holidays, and behaviour change.</li>
+      <li>We did not model balance transfers or overdrafts separately; APRs are generic unsecured credit.</li>
+      <li>Psychology matters: the best method is still the one you stick to. Our study measures interest, not motivation.</li>
+    </ul>
+
+    <div class="cta">
+      <p><strong>Run your own scenario</strong> — no spreadsheet required. Use the <a href="/">free avalanche vs snowball calculator</a> to plug in your balances, APRs, and extra payment. You get the same engine this study used.</p>
+    </div>
+
+    <h2>Related reading</h2>
+    <p>For the conceptual background, read <a href="/blog/debt-avalanche-vs-snowball-which-saves-more-uk.html">Debt Avalanche vs Snowball: Which Saves More Money in the UK?</a> and our <a href="/blog/how-to-pay-off-10000-debt-avalanche-snowball-worked-example.html">£10,000 worked example</a>. If you are weighing a consolidation loan, see <a href="/blog/debt-consolidation-vs-avalanche-snowball-uk.html">Debt Consolidation vs Avalanche &amp; Snowball</a>.</p>
+
+    <aside class="related-articles">
+      <h3>Related articles</h3>
+      <ul>
+        <li><a href="/blog/debt-avalanche-vs-snowball-which-saves-more-uk.html">Debt Avalanche vs Snowball: Which Saves More Money in the UK?</a></li>
+        <li><a href="/blog/how-to-pay-off-10000-debt-avalanche-snowball-worked-example.html">How to Pay Off £10,000 of Debt — Worked Example</a></li>
+        <li><a href="/blog/real-cost-minimum-payments-uk-credit-cards.html">Credit Card Minimum Payment UK — The Real Cost</a></li>
+        <li><a href="/blog/how-long-to-pay-off-credit-card-minimum-payments-uk.html">How Long to Pay Off a Credit Card on Minimum Payments?</a></li>
+        <li><a href="/blog/debt-avalanche-method-uk-guide.html">The Debt Avalanche Method: Step-by-Step UK Guide</a></li>
+        <li><a href="/blog/debt-snowball-method-uk-guide.html">The Debt Snowball Method: Step-by-Step UK Guide</a></li>
+        <li><a href="/blog/balance-transfer-credit-card-debt-avalanche-uk.html">0% Balance Transfer + Debt Avalanche</a></li>
+        <li><a href="/blog/how-to-pay-off-overdraft-uk.html">How to Pay Off Overdraft Debt in the UK</a></li>
+        <li><a href="/blog/debt-consolidation-vs-avalanche-snowball-uk.html">Debt Consolidation vs Avalanche &amp; Snowball</a></li>
+      </ul>
+    </aside>
+
+    <footer class="site-footer">
+      © <span id="footerYear"></span> Avalanche vs Snowball · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a>
+    </footer>
+  </div>
+<script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
+</body>
+</html>

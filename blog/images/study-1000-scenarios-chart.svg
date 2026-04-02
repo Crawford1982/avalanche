@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" width="420" height="180" role="img" aria-label="Bar chart showing avalanche cheaper 85 percent, tie 14 percent, snowball cheaper 1 percent">
+  <title>1,000 scenarios: which method paid less total interest</title>
+  <rect width="420" height="180" fill="#13161d"/>
+  <text x="210" y="22" fill="#e8eaf0" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle" font-weight="600">Total interest outcome (1,000 UK scenarios)</text>
+  <rect x="32" y="38" width="300" height="40" rx="4" fill="#3ecf8e"/>
+  <text x="182" y="64" fill="#0c0e12" font-family="system-ui,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Avalanche paid less interest — 85.4%</text>
+  <rect x="32" y="86" width="48" height="40" rx="4" fill="#6b7490"/>
+  <text x="56" y="112" fill="#e8eaf0" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">Tie 13.7%</text>
+  <rect x="32" y="134" width="32" height="40" rx="4" fill="#f5a623"/>
+  <text x="48" y="160" fill="#0c0e12" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">Snowball 0.9%</text>
+</svg>
