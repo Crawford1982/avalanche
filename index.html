@@ -210,6 +210,14 @@
   .faq-item p { color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
   .faq-item a { color: var(--accent); text-decoration: none; }
   .faq-item a:hover { text-decoration: underline; }
+  /* ---- COMPARISON TABLE ---- */
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 24px 0; }
+  .compare-table th { background: var(--surface); color: var(--muted); padding: 10px 14px; text-align: left; font-weight: 500; border-bottom: 1px solid var(--border); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .compare-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--muted); vertical-align: top; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table .avl { color: var(--avalanche); font-weight: 600; }
+  .compare-table .snw { color: var(--snowball); font-weight: 600; }
+  .compare-table .label { color: var(--text); font-weight: 500; }
 
   /* ---- SITE FOOTER ---- */
   .site-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--muted); }
@@ -255,8 +263,26 @@
     <p>The snowball method costs slightly more in total interest, but many people find it easier to stick to because you get tangible wins early. Clearing a small debt quickly gives a real psychological boost that can help you stay committed to a longer repayment journey. If you've tried and failed to pay off debt before, the motivation factor may be worth more than the interest difference.</p>
 
     <h2>Which Method Saves More Money?</h2>
-    <p>Avalanche almost always saves more money, often by hundreds or thousands of pounds depending on your balances and rates. The difference is largest when you have debts with very different APRs — for example, a 0% balance transfer card alongside a 29.9% store card. In that scenario, the snowball might have you overpaying a cheap balance while expensive interest compounds elsewhere.</p>
+    <p>Avalanche almost always saves more money, often by hundreds or thousands of pounds depending on your balances and rates. Our <a href="/blog/1000-uk-debt-scenarios-avalanche-vs-snowball-study.html">study of 1,000 simulated UK debt portfolios</a> found avalanche produced strictly lower total interest in <strong>85.4% of scenarios</strong> — with a median saving of £679 vs snowball. The difference is largest when you have debts with very different APRs — for example, a 0% balance transfer card alongside a 29.9% store card. In that scenario, the snowball might have you overpaying a cheap balance while expensive interest compounds elsewhere.</p>
     <p>That said, the best debt repayment method is the one you'll actually follow through on. If motivation is your main challenge, consider starting with the snowball to clear one or two small debts quickly, then switching to the avalanche once you have momentum. Use the calculator below with your own numbers — enter your balances, rates, and minimum payments and you'll instantly see the exact interest cost and payoff date for both methods side by side.</p>
+
+    <table class="compare-table" aria-label="Avalanche vs snowball quick comparison">
+      <thead>
+        <tr><th>Factor</th><th class="avl">Avalanche</th><th class="snw">Snowball</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="label">Attack order</td><td>Highest APR first</td><td>Smallest balance first</td></tr>
+        <tr><td class="label">Total interest</td><td class="avl">Usually lower</td><td>Usually higher</td></tr>
+        <tr><td class="label">Time to debt-free</td><td class="avl">Usually faster</td><td>Often slightly longer</td></tr>
+        <tr><td class="label">Early account closures</td><td>Less likely</td><td class="snw">More likely (wins here)</td></tr>
+        <tr><td class="label">Best for</td><td>Saving money, mathematical efficiency</td><td>Motivation, staying on track</td></tr>
+        <tr><td class="label">UK verdict</td><td class="avl">Wins in 85% of scenarios</td><td>Wins only ~1% on interest</td></tr>
+      </tbody>
+    </table>
+
+    <h2>How to Calculate Debt Avalanche vs Snowball</h2>
+    <p>To get accurate results from this calculator, you need three numbers for each debt: <strong>current balance</strong>, <strong>APR</strong> (annual percentage rate, shown on your statement), and <strong>minimum monthly payment</strong>. You also set an <strong>extra monthly payment</strong> — money above your combined minimums that you can realistically contribute each month. Even £50–100 extra makes a dramatic difference to both total interest and payoff time.</p>
+    <p>Add each debt as a separate row using the form below, set your extra payment, and hit <strong>Calculate My Payoff Plan</strong>. The results show: total interest for both methods, exact debt-free date for both, a balance-over-time chart, and the payoff order for each approach. The calculator also shows a "minimums only" baseline so you can see how much your extra payment saves.</p>
 
     <h2>How to Use This Calculator</h2>
     <p>Enter each debt you owe with its current balance, annual interest rate (APR), and minimum monthly payment. Then set an extra monthly payment — this is money above your minimums that you'll throw at the priority debt each month. Even £50 or £100 extra per month makes a dramatic difference to how quickly you become debt-free. Hit <strong>Calculate My Payoff Plan</strong> to see a full side-by-side comparison, a chart of your balances falling over time, and the exact order each debt gets paid off under both methods.</p>
@@ -346,6 +372,18 @@
         <h3>How much extra should I pay each month to make a real difference?</h3>
         <p>Even £50–£100 a month extra can cut years off a typical UK debt repayment plan and save hundreds of pounds in interest. The exact impact depends on your total balances and rates — enter your debts above and try different extra payment amounts to see the difference. As a rough guide, doubling your minimum payment on a £3,000 credit card at 24.9% APR can cut the payoff time from over 25 years to under 3 years. See <a href="/blog/how-long-to-pay-off-credit-card-minimum-payments-uk.html">How Long to Pay Off a Credit Card on Minimum Payments</a> for detailed worked examples.</p>
       </div>
+      <div class="faq-item">
+        <h3>How do I handle an overdraft in the debt avalanche calculator?</h3>
+        <p>Add your overdraft as a regular debt row. Enter the current overdrawn balance, your overdraft EAR as the rate (most UK overdrafts are around 39.9% EAR), and a monthly payment amount you can commit to reducing it. The calculator treats it identically to a credit card — the high EAR means it will typically land at the top of your avalanche priority list. For more detail on overdraft debt specifically, read <a href="/blog/how-to-pay-off-overdraft-uk.html">How to Pay Off Overdraft Debt in the UK</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is it worth getting a debt consolidation loan to pay off credit cards faster?</h3>
+        <p>Sometimes. A consolidation loan is cheaper than DIY avalanche only if its APR — after any arrangement fee — is meaningfully lower than your weighted average rate across existing debts, <em>and</em> the term is not significantly extended. For many UK borrowers, an unsecured loan at 6–10% APR can save over £1,000 vs avalanche alone. But consolidation at 20%+ APR is rarely cheaper than well-executed avalanche. The key test: compare total amount repayable on the loan against your total interest from the calculator above. Read the full analysis in <a href="/blog/debt-consolidation-vs-avalanche-snowball-uk.html">Debt Consolidation vs Avalanche &amp; Snowball</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this calculator work for UK credit cards, personal loans, and overdrafts?</h3>
+        <p>Yes. Enter any combination of debts — credit cards, store cards, personal loans, overdrafts, car finance — as separate rows. Just use the APR for each (your overdraft's EAR works as the rate, as it is directly comparable). The calculator shows avalanche vs snowball vs minimums-only for whatever debt mix you enter. No sign-up, no account — and your data never leaves your device.</p>
+      </div>
     </div>
   </section>
 
@@ -361,7 +399,7 @@
 {"@context":"https://schema.org","@type":"WebSite","name":"Avalanche vs Snowball","url":"https://avalanchevssnowball.co.uk/","description":"Free UK debt payoff calculator comparing the debt avalanche and snowball methods.","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"Avalanche vs Snowball","url":"https://avalanchevssnowball.co.uk/","logo":{"@type":"ImageObject","url":"https://avalanchevssnowball.co.uk/favicon.svg"},"contactPoint":{"@type":"ContactPoint","email":"hello@avalanchevssnowball.co.uk","contactType":"customer support"}}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the avalanche or snowball method better?","acceptedAnswer":{"@type":"Answer","text":"For saving money, the avalanche method is usually better: you pay less interest and can be debt-free sooner. The snowball method can feel better psychologically because you clear small debts quickly. Use our calculator with your own numbers to compare both."}},{"@type":"Question","name":"How much interest will I save with the avalanche method?","acceptedAnswer":{"@type":"Answer","text":"It depends on your balances, rates, and how much extra you pay. Often it's hundreds or thousands of pounds over the life of your debt. Enter your debts in the calculator to see your exact interest under avalanche vs snowball."}},{"@type":"Question","name":"What's the fastest way to pay off credit card debt in the UK?","acceptedAnswer":{"@type":"Answer","text":"Paying more than the minimum and targeting the highest-interest card first (avalanche) is usually the fastest and cheapest. Use the free calculator to plan your payoff."}},{"@type":"Question","name":"Can I use the avalanche and snowball methods together?","acceptedAnswer":{"@type":"Answer","text":"Yes — a common hybrid approach is to use the snowball first to clear one or two very small debts, then switch to the avalanche for the remaining higher-balance debts. You get the psychological boost of early wins while still limiting total interest."}},{"@type":"Question","name":"How much extra should I pay each month to make a real difference?","acceptedAnswer":{"@type":"Answer","text":"Even £50–£100 a month extra can cut years off a typical UK debt repayment plan and save hundreds of pounds in interest. Doubling your minimum payment on a £3,000 credit card at 24.9% APR can cut the payoff time from over 25 years to under 3 years."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the avalanche or snowball method better?","acceptedAnswer":{"@type":"Answer","text":"For saving money, the avalanche method is usually better: you pay less interest and can be debt-free sooner. Our study of 1,000 UK debt scenarios found avalanche saved more interest in 85.4% of cases. The snowball method can feel better psychologically because you clear small debts quickly. Use our calculator with your own numbers to compare both."}},{"@type":"Question","name":"How much interest will I save with the avalanche method?","acceptedAnswer":{"@type":"Answer","text":"It depends on your balances, rates, and how much extra you pay. Often it's hundreds or thousands of pounds. In our 1,000-scenario study, the median saving of avalanche over snowball was £679, with the 90th percentile gap reaching £2,913. Enter your debts in the calculator to see your exact interest under both methods."}},{"@type":"Question","name":"What's the fastest way to pay off credit card debt in the UK?","acceptedAnswer":{"@type":"Answer","text":"Paying more than the minimum and targeting the highest-interest card first (avalanche) is usually the fastest and cheapest. For credit cards at 20%+ APR, combining the avalanche method with a 0% balance transfer can cut your effective rate to near-zero for the promotional period, dramatically accelerating payoff. Use the free calculator to plan your payoff."}},{"@type":"Question","name":"Can I use the avalanche and snowball methods together?","acceptedAnswer":{"@type":"Answer","text":"Yes — a common hybrid approach is to use the snowball first to clear one or two very small debts, then switch to the avalanche for the remaining higher-balance debts. You get the psychological boost of early wins while still limiting total interest."}},{"@type":"Question","name":"How much extra should I pay each month to make a real difference?","acceptedAnswer":{"@type":"Answer","text":"Even £50–£100 a month extra can cut years off a typical UK debt repayment plan and save hundreds of pounds in interest. Doubling your minimum payment on a £3,000 credit card at 24.9% APR can cut the payoff time from over 25 years to under 3 years."}},{"@type":"Question","name":"How do I handle an overdraft in the debt avalanche calculator?","acceptedAnswer":{"@type":"Answer","text":"Add your overdraft as a regular debt row with the overdrawn balance, the EAR as the rate (most UK arranged overdrafts are around 39.9% EAR), and a monthly payment you can commit to. The high EAR means it will typically land at the top of your avalanche priority list, ahead of most credit cards."}},{"@type":"Question","name":"Does this calculator work for UK credit cards, personal loans, and overdrafts?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter any combination of debts — credit cards, store cards, personal loans, overdrafts, car finance — as separate rows. Use the APR or EAR for each debt type. The calculator shows avalanche vs snowball vs minimums-only for whatever mix you enter. No sign-up required and your data never leaves your device."}}]}
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <script>

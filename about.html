@@ -14,20 +14,68 @@
   </script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <title>About — Avalanche vs Snowball UK Debt Payoff Calculator</title>
-  <meta name="description" content="About the free UK debt avalanche vs snowball calculator. How the maths works, who built it, and where to get free regulated debt advice if you need it.">
+  <meta name="description" content="About the free UK debt avalanche vs snowball calculator. Who built it, how the maths works, our accuracy commitments, and where to get free regulated debt advice.">
   <link rel="canonical" href="https://avalanchevssnowball.co.uk/about.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://avalanchevssnowball.co.uk/about.html">
   <meta property="og:title" content="About — Avalanche vs Snowball UK Debt Payoff Calculator">
-  <meta property="og:description" content="How the free UK debt payoff calculator works, who built it, and where to get free regulated debt advice.">
+  <meta property="og:description" content="Who built the free UK debt payoff calculator, how the maths works, and where to get free regulated debt advice.">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image" content="https://avalanchevssnowball.co.uk/og-image.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="About — Avalanche vs Snowball UK Debt Payoff Calculator">
-  <meta name="twitter:description" content="How the free UK debt payoff calculator works, who built it, and where to get free regulated debt advice.">
+  <meta name="twitter:description" content="Who built the free UK debt payoff calculator, how the maths works, and free debt advice resources.">
   <meta name="twitter:image" content="https://avalanchevssnowball.co.uk/og-image.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"AboutPage","name":"About — Avalanche vs Snowball","url":"https://avalanchevssnowball.co.uk/about.html","description":"About the free UK debt avalanche vs snowball calculator — methodology, who built it, and debt help resources.","publisher":{"@type":"Organization","name":"Avalanche vs Snowball","url":"https://avalanchevssnowball.co.uk/"},"mainEntity":{"@type":"WebApplication","name":"Debt Avalanche vs Snowball Calculator","url":"https://avalanchevssnowball.co.uk/","description":"Free UK debt payoff calculator comparing the avalanche and snowball methods side by side."}}
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About — Avalanche vs Snowball UK Debt Payoff Calculator",
+    "url": "https://avalanchevssnowball.co.uk/about.html",
+    "description": "About the free UK debt avalanche vs snowball calculator — who built it, how the maths works, and where to get free regulated debt advice.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Calculator", "item": "https://avalanchevssnowball.co.uk/"},
+        {"@type": "ListItem", "position": 2, "name": "About"}
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Avalanche vs Snowball",
+      "url": "https://avalanchevssnowball.co.uk/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@avalanchevssnowball.co.uk",
+        "contactType": "customer support"
+      }
+    },
+    "mainEntity": {
+      "@type": "WebApplication",
+      "name": "Debt Avalanche vs Snowball Calculator",
+      "url": "https://avalanchevssnowball.co.uk/",
+      "description": "Free UK debt payoff calculator comparing the avalanche and snowball methods side by side.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"},
+      "inLanguage": "en-GB"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jim Crawford",
+    "url": "https://avalanchevssnowball.co.uk/about.html",
+    "description": "UK personal finance enthusiast and the builder of Avalanche vs Snowball, a free debt payoff calculator for UK borrowers.",
+    "knowsAbout": ["debt management", "personal finance", "debt avalanche method", "debt snowball method", "UK credit cards", "debt repayment strategies"],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Avalanche vs Snowball",
+      "url": "https://avalanchevssnowball.co.uk/"
+    }
+  }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -46,26 +94,43 @@
     .container { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
     h1 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-bottom: 20px; color: var(--text); line-height: 1.3; }
     h2 { font-family: var(--font-display); font-size: 1.35rem; margin-top: 40px; margin-bottom: 14px; color: var(--text); }
+    h3 { font-size: 1rem; font-weight: 600; margin-top: 24px; margin-bottom: 8px; color: var(--text); }
     p { margin-bottom: 16px; color: var(--muted); }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     ul { margin: 12px 0 16px 24px; color: var(--muted); }
     li { margin-bottom: 8px; }
     strong { color: var(--text); }
+    .breadcrumb { font-size: 0.85rem; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); }
+    .breadcrumb a:hover { color: var(--text); }
+    .author-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 28px 0; display: flex; gap: 20px; align-items: flex-start; }
+    .author-avatar { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #2d5fff, #4f7cff); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.4rem; color: #fff; }
+    .author-info { flex: 1; }
+    .author-info strong { display: block; font-size: 1rem; margin-bottom: 4px; }
+    .author-info p { margin: 0; font-size: 0.9rem; }
     .info-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin: 28px 0; }
-    .info-box h3 { font-family: var(--font-display); font-size: 1rem; color: var(--text); margin-bottom: 10px; font-weight: 400; }
+    .info-box h3 { font-family: var(--font-display); font-size: 1rem; color: var(--text); margin-bottom: 10px; font-weight: 400; margin-top: 0; }
     .resource-list { list-style: none; margin: 0; padding: 0; }
     .resource-list li { padding: 10px 0; border-bottom: 1px solid var(--border); }
     .resource-list li:last-child { border-bottom: none; }
     .resource-list a { color: var(--text); font-weight: 500; }
     .resource-list a:hover { color: var(--accent); }
     .resource-list span { display: block; color: var(--muted); font-size: 0.9rem; margin-top: 2px; }
+    .methodology-step { display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; }
+    .step-badge { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: rgba(79,124,255,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+    .methodology-step p { margin: 0; }
+    .accuracy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    .accuracy-item { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+    .accuracy-item .label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+    .accuracy-item .value { font-size: 0.9rem; color: var(--text); font-weight: 500; }
     .disclaimer { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 28px 0; font-size: 0.9rem; color: var(--muted); }
     .site-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--muted); }
     .site-footer a { color: var(--muted); }
     .site-footer a:hover { color: var(--text); }
     .skip-link { position: absolute; top: -100px; left: 16px; background: var(--accent); color: #fff; padding: 10px 16px; border-radius: 6px; font-size: 0.9rem; z-index: 100; transition: top 0.2s; }
     .skip-link:focus { top: 16px; outline: 2px solid var(--text); outline-offset: 2px; }
+    @media (max-width: 500px) { .accuracy-grid { grid-template-columns: 1fr; } .author-card { flex-direction: column; } }
   </style>
 </head>
 <body>
@@ -80,56 +145,131 @@
     </nav>
   </header>
   <div class="container" id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Calculator</a> → <span aria-current="page">About</span></nav>
     <h1>About this calculator</h1>
 
-    <p>Avalanche vs Snowball is a free, no-login UK debt payoff calculator. Enter your debts — credit cards, store cards, personal loans, overdrafts — and it shows you side by side how much interest you'd pay and how long it would take using the debt avalanche method versus the debt snowball method. The goal is to give you accurate numbers so you can make an informed choice, not to upsell you anything.</p>
+    <p>Avalanche vs Snowball is a free, no-login UK debt payoff calculator. Enter your debts — credit cards, store cards, personal loans, overdrafts — and it shows you side by side how much interest you'd pay and how long it would take using the <strong>debt avalanche method</strong> versus the <strong>debt snowball method</strong>. The goal is to give you accurate numbers so you can make an informed choice, with no upselling and no data collection.</p>
+
+    <h2>Who built this</h2>
+
+    <div class="author-card">
+      <div class="author-avatar" aria-hidden="true">J</div>
+      <div class="author-info">
+        <strong>Jim Crawford</strong>
+        <p>UK personal finance enthusiast. I built this tool after spending an embarrassing amount of time trying to find a clean, fast, UK-specific debt calculator that didn't require signing up for something or wade through US dollar examples. This is the tool I wished existed. I'm not a financial adviser — just someone who cares about getting the maths right and presenting it clearly.</p>
+        <p style="margin-top:8px;font-size:0.85rem;">Questions or corrections: <a href="mailto:hello@avalanchevssnowball.co.uk">hello@avalanchevssnowball.co.uk</a></p>
+      </div>
+    </div>
 
     <h2>Why we built it</h2>
-    <p>Most debt calculators we found were either US-focused (wrong currency, wrong regulatory context), cluttered with ads, or required you to create an account before they'd show you anything useful. We wanted a clean, fast tool built for UK credit cards and loans that anyone could use in under two minutes, with no sign-up and nothing to install.</p>
-    <p>We also wanted the blog articles to be genuinely useful — worked examples with real UK APRs, explanations of why the maths works the way it does, and honest comparisons of the two methods rather than just telling everyone to use the avalanche because it's "mathematically optimal." Sometimes the snowball is the right call, and we try to explain when and why. The main write-up is <a href="/blog/debt-avalanche-vs-snowball-which-saves-more-uk.html">Debt Avalanche vs Snowball: Which Saves More Money in the UK?</a></p>
+    <p>Most debt calculators we found were either US-focused (wrong currency, wrong regulatory context), cluttered with ads, or required you to create an account before showing you anything useful. We wanted a clean, fast tool built specifically for UK credit cards and personal loans that anyone could use in under two minutes — no sign-up, nothing to install, nothing sold to you.</p>
+    <p>We also wanted the blog articles to be genuinely useful: worked examples with real UK APRs, honest comparisons of both methods, and explanations of why the maths works the way it does. The main comparison is <a href="/blog/debt-avalanche-vs-snowball-which-saves-more-uk.html">Debt Avalanche vs Snowball: Which Saves More Money in the UK?</a> — it includes our original data from analysing <a href="/blog/1000-uk-debt-scenarios-avalanche-vs-snowball-study.html">1,000 simulated UK debt scenarios</a>.</p>
 
     <h2>How the calculator works</h2>
-    <p>The calculator uses standard monthly compound interest arithmetic — the same maths your credit card issuer uses. Each month it applies one-twelfth of your annual APR to the current balance, subtracts your payment, and moves to the next month. For the avalanche method it directs any extra payment above minimums to the debt with the highest APR; for snowball it directs the extra to the smallest balance. Both methods continue until every debt is paid off.</p>
-    <p>The results — total interest paid, debt-free date, and monthly balance chart — update in real time in your browser. No data is sent to any server. Everything runs locally on your device, so your debt figures stay private.</p>
+    <p>The calculator uses standard monthly compound interest arithmetic — the same maths your credit card issuer uses. Here is the exact logic applied each month:</p>
 
-    <h2>What we are (and aren't)</h2>
-    <p>This is an educational tool, not regulated financial advice. The calculator is accurate for the inputs you provide, but your actual payoff will depend on factors it doesn't model: whether your minimum payment changes as your balance falls (many UK card issuers recalculate minimums each month), any payment holidays, charges, or balance transfers you make along the way, and so on.</p>
-    <p><strong>We are not a debt advice charity, a lender, or a regulated financial adviser.</strong> If you're struggling with debt — missing payments, feeling stressed about money, or unsure where to start — please contact one of the free UK debt advice services below. They are staffed by trained advisers, are completely free to use, and are authorised by the Financial Conduct Authority.</p>
+    <div class="methodology-step">
+      <div class="step-badge">1</div>
+      <p><strong>Apply monthly interest</strong> to every open balance. Your annual APR is divided by 12 and applied to the current balance — so a £2,000 balance at 22.9% APR accrues approximately £38.17 in interest in month one.</p>
+    </div>
+    <div class="methodology-step">
+      <div class="step-badge">2</div>
+      <p><strong>Subtract the minimum payment</strong> from every debt. Minimums are fixed at whatever you enter — the calculator does not recalculate them as balances fall, because many UK borrowers are on fixed minimum arrangements or prefer to model a consistent payment. If your card recalculates minimums, the calculator will be slightly conservative (real interest paid will be lower).</p>
+    </div>
+    <div class="methodology-step">
+      <div class="step-badge">3</div>
+      <p><strong>Apply the extra payment</strong> to the priority debt: for <span style="color:var(--avalanche)">avalanche</span> this is the highest-APR debt; for <span style="color:var(--snowball)">snowball</span> it is the smallest balance. The full extra payment goes to one target — not split across debts.</p>
+    </div>
+    <div class="methodology-step">
+      <div class="step-badge">4</div>
+      <p><strong>When a debt reaches zero</strong>, its full previous payment (minimum + any extra that was directed to it) automatically rolls onto the next priority debt. This "payment roll" compounds your speed over time — the avalanche or snowball accelerates as each debt falls.</p>
+    </div>
+    <div class="methodology-step">
+      <div class="step-badge">5</div>
+      <p><strong>Continue until all balances are zero.</strong> The simulation is capped at 600 months (50 years) to prevent infinite loops if a minimum payment is smaller than the monthly interest charge — a warning is shown if this happens.</p>
+    </div>
+
+    <p style="margin-top:16px;">All calculations happen locally in your browser. No balance, APR, or personal information is ever sent to our servers or stored anywhere. The URL updates as you enter debts so you can bookmark or share a specific scenario, but that data stays in the URL — it is never logged.</p>
+
+    <h2>Accuracy commitments</h2>
+    <p>We take accuracy seriously because the purpose of this tool is to help people make real financial decisions. Here is what we do and do not model:</p>
+
+    <div class="accuracy-grid">
+      <div class="accuracy-item">
+        <div class="label">What we model correctly</div>
+        <div class="value">Monthly compound interest at your stated APR</div>
+      </div>
+      <div class="accuracy-item">
+        <div class="label">What we model correctly</div>
+        <div class="value">Payment rolling when a debt clears</div>
+      </div>
+      <div class="accuracy-item">
+        <div class="label">What we model correctly</div>
+        <div class="value">Side-by-side avalanche vs snowball vs minimums-only</div>
+      </div>
+      <div class="accuracy-item">
+        <div class="label">What we model correctly</div>
+        <div class="value">Warning if minimum < monthly interest (growing debt)</div>
+      </div>
+      <div class="accuracy-item">
+        <div class="label">What we simplify</div>
+        <div class="value">Fixed minimums (real card minimums recalculate monthly)</div>
+      </div>
+      <div class="accuracy-item">
+        <div class="label">What we don't model</div>
+        <div class="value">0% promotional periods, payment holidays, or fees</div>
+      </div>
+    </div>
+
+    <p>The calculator was stress-tested against the <a href="/blog/1000-uk-debt-scenarios-avalanche-vs-snowball-study.html">1,000 scenario simulation</a> and its month-by-month results match the hand-calculated figures in the <a href="/blog/how-to-pay-off-10000-debt-avalanche-snowball-worked-example.html">£10,000 worked example</a> article. If you spot an error, please email us and we will verify and fix it within 48 hours.</p>
+
+    <h2>Our content standards</h2>
+    <p>Every article on this site is written to explain real UK debt concepts using realistic APRs and actual regulation (FCA, not SEC). We use UK-specific rates: credit card APRs in the 18–30% range, overdraft EARs in the 19–40% range, and personal loan APRs in the 6–25% range. We link to the FCA consumer credit register, MoneyHelper, and other authoritative UK sources where relevant.</p>
+    <p>We aim to update articles when APR norms or regulatory guidance changes. If you find an article that references outdated rates or regulations, please let us know.</p>
+
+    <h2>What we are (and are not)</h2>
+    <p>This is an educational tool, not regulated financial advice. The calculator is accurate for the inputs you provide, but your actual payoff will depend on factors it does not model: whether your minimum payment changes as your balance falls, any payment holidays, charges, or balance transfers you make along the way, and changes to your interest rate (for example, if a 0% promotional period ends).</p>
+    <p><strong>We are not a debt advice charity, a lender, or a regulated financial adviser.</strong> If you are struggling with debt — missing payments, feeling stressed about money, or simply unsure where to start — please contact one of the free UK debt advice services below. They are staffed by trained advisers, completely free to use, and authorised by the Financial Conduct Authority.</p>
 
     <div class="info-box">
       <h3>Free UK debt advice — regulated and independent</h3>
       <ul class="resource-list">
         <li>
-          <a href="https://www.moneyhelper.org.uk/en/money-troubles/dealing-with-debt" target="_blank" rel="noopener">MoneyHelper — Debt advice</a>
-          <span>Run by the Money and Pensions Service, a government-backed body. Impartial guidance and referrals to free advice services.</span>
+          <a href="https://www.moneyhelper.org.uk/en/money-troubles/dealing-with-debt" target="_blank" rel="noopener noreferrer">MoneyHelper — Debt advice</a>
+          <span>Run by the Money and Pensions Service, a government-backed body. Impartial guidance and referrals to free debt advice services. Also runs the Debt Advice Locator to find local help.</span>
         </li>
         <li>
-          <a href="https://www.stepchange.org/" target="_blank" rel="noopener">StepChange Debt Charity</a>
-          <span>Free debt advice by phone or online. Can arrange debt management plans and other formal solutions.</span>
+          <a href="https://www.stepchange.org/" target="_blank" rel="noopener noreferrer">StepChange Debt Charity</a>
+          <span>Free debt advice by phone or online. Can arrange debt management plans, Individual Voluntary Arrangements (IVAs), and other formal solutions. FCA-authorised.</span>
         </li>
         <li>
-          <a href="https://www.citizensadvice.org.uk/debt-and-money/" target="_blank" rel="noopener">Citizens Advice — Debt and money</a>
-          <span>Free, confidential advice in person, online, or by phone. Available across England and Wales.</span>
+          <a href="https://www.citizensadvice.org.uk/debt-and-money/" target="_blank" rel="noopener noreferrer">Citizens Advice — Debt and money</a>
+          <span>Free, confidential advice in person, online, or by phone. Available across England and Wales. No appointment needed for online help.</span>
         </li>
         <li>
-          <a href="https://www.nationaldebtline.org/" target="_blank" rel="noopener">National Debtline</a>
-          <span>Free helpline and self-help resources. Covers England, Wales, and Scotland.</span>
+          <a href="https://www.nationaldebtline.org/" target="_blank" rel="noopener noreferrer">National Debtline</a>
+          <span>Free helpline and self-help resources. Covers England, Wales, and Scotland. Specialists in helping people handle their own debt without a debt management plan if that is the right route.</span>
+        </li>
+        <li>
+          <a href="https://www.payplan.com/" target="_blank" rel="noopener noreferrer">PayPlan</a>
+          <span>Free debt advice and debt management plans, funded by creditors (not you). FCA-regulated. Good option if you have multiple creditors and need a structured plan.</span>
         </li>
       </ul>
     </div>
 
     <h2>Affiliate disclosure</h2>
-    <p>Some articles on this site may contain affiliate links — for example, links to balance transfer credit cards. If you apply for a product through one of those links, we may receive a commission from the lender at no extra cost to you. We only ever link to products where they're genuinely relevant to the topic being discussed, and our editorial content is not influenced by commercial relationships. The calculator itself is and will always be free with no ads embedded in it.</p>
+    <p>Some articles on this site contain affiliate links — for example, links to 0% balance transfer credit cards. If you apply for a product through one of those links, we may receive a commission from the lender at no extra cost to you. We only link to products where they are genuinely relevant to the topic being discussed, and our editorial content is not influenced by any commercial relationships. The calculator itself is, and will always remain, completely free with no advertising embedded in it.</p>
+    <p>Any page containing an affiliate link is clearly marked. We do not accept payment for editorial mentions or rankings, and we do not compare products outside of editorial context.</p>
 
-    <h2>Contact and feedback</h2>
-    <p>If you spot a calculation error, a broken link, or an article that's out of date, please let us know. You can reach us at <a href="mailto:hello@avalanchevssnowball.co.uk">hello@avalanchevssnowball.co.uk</a>. We can't offer personal debt advice — for that please use the resources above — but we do read every message and fix errors promptly.</p>
+    <h2>Corrections and feedback</h2>
+    <p>If you spot a calculation error, a broken link, an article that references outdated rates, or anything else that seems wrong, please let us know at <a href="mailto:hello@avalanchevssnowball.co.uk">hello@avalanchevssnowball.co.uk</a>. We read every message and fix errors within 48 hours. We cannot offer personal debt advice — for that please use the regulated resources above — but we take accuracy very seriously and genuinely want to know if something is wrong.</p>
 
     <div class="disclaimer">
-      <strong>Important:</strong> The information on this website is for general educational purposes and does not constitute financial advice. We are not regulated by the Financial Conduct Authority. Always seek professional advice if you are unsure about the right course of action for your personal circumstances.
+      <strong>Important:</strong> The information on this website is for general educational purposes and does not constitute financial advice. We are not regulated by the Financial Conduct Authority. Always seek professional advice if you are unsure about the right course of action for your personal financial circumstances. If you are in difficulty, please use the free debt advice resources listed above.
     </div>
 
     <footer class="site-footer">
-      © <span id="footerYear"></span> Avalanche vs Snowball · <a href="/privacy.html">Privacy</a>
+      © <span id="footerYear"></span> Avalanche vs Snowball · <a href="/privacy.html">Privacy</a> · <a href="/">Calculator</a>
     </footer>
   </div>
 <script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
